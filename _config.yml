@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-UK"
-title                    : "Scott Warchal / Site Title"
+title                    : #"Scott Warchal / Site Title"
 title_separator          : "-"
 name                     : &name "Scott Warchal"
 description              : &description "personal description"
@@ -80,8 +80,8 @@ analytics:
 author:
   name             : "Scott Warchal"
   avatar           : "profile.png"
-  bio              : "PhD student, Phenotypic screening, imaging and anaytics"
-  location         : "Edinburgh"
+  bio              : "PhD student, Cancer Research UK Edinburgh Centre"
+  location         : "Edinburgh, UK"
   employer         :
   googlescholar    : "https://scholar.google.co.uk/citations?user=pSpdqOIAAAAJ&hl=en"
   email            :
@@ -98,13 +98,13 @@ author:
   instagram        :
   lastfm           :
   linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0000-0003-1743-2160"
   pinterest        :
   soundcloud       :
-  stackoverflow    : https://stackoverflow.com/users/5445177/scott-warchal
+  stackoverflow    : 5445177/scott-warchal
   steam            :
   tumblr           :
-  twitter          : "sjwarchal"
+  twitter          : 
   vine             :
   weibo            :
   xing             :

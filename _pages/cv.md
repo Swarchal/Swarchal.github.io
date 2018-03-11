@@ -11,49 +11,36 @@ redirect_from:
 
 Education
 ======
-* B.S. in Github, Github University, 2012
-* M.S. in Jekyll, Github University, 2014
-* Ph.D in Version Control Theory, Github University, 2018 (expected)
+
+* Ph.D in Drug Discovery & Image Informatics, University of Edinburgh, 2018 (expected)
+* B.Sc (Hons) in Pharmacology, University of Bath, 2014
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* 2012-2013: 12 month work placement
+  * University of Manchester
+  * Project: *in vivo* phenotypic screening of neurodegenerative disease models in *C. elegans*
+  * Supervisor: Prof. David Sattelle
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+
+* Programming & Data-analysis
+  * Written multiple R and python packages, some of which are used in multiple labs across the world
+  * Experience using multivariate statistics to gain biological insights from large datasets
+  * Creating batch processing and database systems for automating image-analysis
+* Wet lab
+  * High-throughput compound screening
+  * Automated liquid handling and robotics
+  * Routine mammalian tissue culture
+  * Routing molecular biology
+  * Microscopy
 
 Publications
 ======
+
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
