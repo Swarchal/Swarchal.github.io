@@ -13,6 +13,8 @@ Education
 ======
 
 * Ph.D in Drug Discovery & Image Informatics, University of Edinburgh, 2018 (expected)
+  * Thesis: Image-informatics Approaches to Advance Cancer Drug Discovery
+  * Supervisor: Prof. Neil Carragher
 * B.Sc (Hons) in Pharmacology, University of Bath, 2014
 
 Work experience

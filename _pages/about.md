@@ -8,11 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-### Research
+## Research
 
-My research focuses on analysing microscopy images to gain an understanding of drug mechanism-of-action. My work during my PhD has been applying these image and data-analysis methods to profile the distinct phenotypic response between panels of cancer cell-lines in response to small drug-like molecules.
+My research focuses on analysing microscopy images to gain an understanding of drug mechanism-of-action. My work during my PhD has been applying these methods to profile phenotypic response between panels of cancer cell-lines in response to small drug-like molecules.
 
-### Background
+## Background
 
 
-### Projects
+## Projects
