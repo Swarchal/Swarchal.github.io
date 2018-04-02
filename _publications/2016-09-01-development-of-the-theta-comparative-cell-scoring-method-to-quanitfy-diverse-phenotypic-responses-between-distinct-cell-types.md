@@ -6,7 +6,7 @@ excerpt: 'An algorithm for quantifying changes in cellular morphology'
 date: 2016-09-01
 venue: 'Assay and Drug Development Technologies'
 paperurl: 'https://www.liebertpub.com/doi/full/10.1089/adt.2016.730'
-citation: 'Scott J Warchal, John C Dawson, Neil O Carragher. (2016). Assay Drug Dev Technol. 14(7): 395–406'
+#citation: 'Scott J Warchal, John C Dawson, Neil O Carragher. (2016). Assay Drug Dev Technol. 14(7): 395–406'
 ---
 Abstract:
 

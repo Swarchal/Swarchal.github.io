@@ -6,7 +6,7 @@ excerpt: 'A review on phenotypic screening in Drug-Discovery'
 date: 2016-07-30
 venue: 'Future medicinal chemistry'
 paperurl: 'https://www.future-science.com/doi/abs/10.4155/fmc-2016-0025'
-citation: 'Scott J Warchal, Asier Unciti-Broceta, Neil O Carragher (2017). Next-generation phenotypic Screening. Future Medicinal Chemistry Vol. 8, No. 11'
+#citation: 'Scott J Warchal, Asier Unciti-Broceta, Neil O Carragher (2017). Next-generation phenotypic Screening. Future Medicinal Chemistry Vol. 8, No. 11'
 ---
 Abstract:
 

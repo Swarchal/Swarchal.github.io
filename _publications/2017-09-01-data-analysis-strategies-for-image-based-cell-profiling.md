@@ -6,7 +6,7 @@ excerpt: 'Best-practices in analysing high-content data'
 date: 2017-09-01
 venue: 'Nature Methods'
 paperurl: 'https://www.nature.com/articles/nmeth.4397'
-citation: 'Juan C Caicedo, Sam Cooper, Florian Heigwer, Scott Warchal, Peng Qiu, Csaba Molnar, Aliaksei S Vasilevich, Joseph D Barry, Harmanjit Singh Bansal, Oren Kraus, Mathias Wawer, Lassi Paavolainen, Markus D Herrmann, Mohammad Rohban, Jane Hung, Holger Hennig, John Concannon, Ian Smith, Paul A Clemons, Shantanu Singh, Paul Rees, Peter Horvath, Roger G Linington & Anne E Carpenter. (2017). Nature Methods volume 14, pages 849–863'
+#citation: 'Juan C Caicedo, Sam Cooper, Florian Heigwer, Scott Warchal, Peng Qiu, Csaba Molnar, Aliaksei S Vasilevich, Joseph D Barry, Harmanjit Singh Bansal, Oren Kraus, Mathias Wawer, Lassi Paavolainen, Markus D Herrmann, Mohammad Rohban, Jane Hung, Holger Hennig, John Concannon, Ian Smith, Paul A Clemons, Shantanu Singh, Paul Rees, Peter Horvath, Roger G Linington & Anne E Carpenter. (2017). Nature Methods volume 14, pages 849–863'
 ---
 Abstract:
 
