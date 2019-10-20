@@ -3,7 +3,7 @@ title: "Evaluation of Machine Learning Classifiers to Predict Compound Mechanism
 collection: publications
 permalink: /publication/2019-03-01
 excerpt: 'The aim of the study was to evaluate the performance of classical tree-based classifiers trained on extracted morphological data and convolutional neural network classifiers trained on image data to predict compound mechanism of action from celllular morphology when applied to previously unseen cell-lines.'
-date: 2017-09-01
+date: 2019-01-29
 venue: 'SLAS Discovery'
 paperurl: 'https://journals.sagepub.com/doi/full/10.1177/2472555218820805?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed'
 ---
