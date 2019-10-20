@@ -9,17 +9,14 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
+## Education
 * Ph.D in Drug Discovery & Image Informatics, University of Edinburgh, 2014-2018
   * Thesis: Image-informatics Approaches to Advance Cancer Drug Discovery
   * Supervisor: Prof. Neil Carragher
 * B.Sc (Hons) in Pharmacology, University of Bath, 2010-2014
 
-Work experience
-======
-
-*  2018-Present Post-doc at Servier
+## Work experience
+*  2018-Present: Post-doctoral Researcher at Servier
    * Data science group within the Screening and BioBank department
    * Image analysis from cell-based screens
    * Software development for internal tools
@@ -29,9 +26,7 @@ Work experience
    * Project: *in vivo* phenotypic screening of neurodegenerative disease models in *C. elegans*
    * Supervisor: Prof. David Sattelle
   
-Skills
-======
-
+## Skills
 * Programming & Data-analysis
   * Written multiple R and python packages, some of which are used in multiple labs across the world
   * Experience using multivariate statistics to gain biological insights from large datasets
@@ -39,13 +34,11 @@ Skills
 * Wet lab
   * High-throughput compound screening
   * Automated liquid handling and robotics
-  * Routine mammalian tissue culture
-  * Routine molecular biology
+  * Mammalian tissue culture
+  * Routine molecular biology techniques
   * Microscopy
 
-Publications
-======
-
+## Publications
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>

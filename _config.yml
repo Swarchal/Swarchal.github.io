@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-UK"
-title                    : #"Scott Warchal / Site Title"
+title                    : "Scott Warchal"
 title_separator          : "-"
 name                     : &name "Scott Warchal"
 description              : &description "personal description"
@@ -97,7 +97,7 @@ author:
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         :
+  linkedin         : "https://www.linkedin.com/in/scott-warchal-93445855/"
   orcid            : "https://orcid.org/0000-0003-1743-2160"
   pinterest        :
   soundcloud       :

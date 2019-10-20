@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://swarchal.github.io/portfolio/portfolio-1/</loc>
-<lastmod>2019-10-12T14:08:17-07:00</lastmod>
+<lastmod>2019-10-20T08:42:27-07:00</lastmod>
 </url>
 <url>
 <loc>https://swarchal.github.io/portfolio/portfolio-2/</loc>
-<lastmod>2019-10-12T14:08:17-07:00</lastmod>
+<lastmod>2019-10-20T08:42:27-07:00</lastmod>
 </url>
 <url>
 <loc>https://swarchal.github.io/posts/2012/08/blog-post-1/</loc>
@@ -34,6 +34,14 @@
 </url>
 <url>
 <loc>https://swarchal.github.io/publication/2017-09-01</loc>
+<lastmod>2017-09-01T00:00:00-07:00</lastmod>
+</url>
+<url>
+<loc>https://swarchal.github.io/publication/2018-06-01</loc>
+<lastmod>2017-09-01T00:00:00-07:00</lastmod>
+</url>
+<url>
+<loc>https://swarchal.github.io/publication/2019-03-01</loc>
 <lastmod>2017-09-01T00:00:00-07:00</lastmod>
 </url>
 <url>

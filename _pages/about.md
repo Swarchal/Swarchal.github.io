@@ -8,11 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-I am a postdoctoral Researcher in a pharmaceutical company.
+I am a postdoctoral researcher at the pharmaceutical company Servier.
 
 ## Research interests
 
-My interests revolve around high-content screening, data-analysis and making software tools to make things easier.
+My interests revolve around high-content and cell-based screening, data-analysis and creating software tools to make things easier.
 
 ## Background
 
