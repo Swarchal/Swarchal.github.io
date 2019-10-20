@@ -3,7 +3,7 @@ title: "The fungal alkaloid Okaramine-B activates an L-glutamate-gated chloride 
 collection: publications
 permalink: /publication/2018-06-01
 excerpt: 'An isolate from Penicillium simplicissimum activates a novel L-glutamate gated chloride channel cloned from the black-legged tick Ixodes scapularis.'
-date: 2017-09-01
+date: 2018-06-01
 venue: 'International Journal for Parasitology: Drugs and Drug Resistance'
 paperurl: 'https://www.sciencedirect.com/science/article/pii/S2211320717301148'
 ---
