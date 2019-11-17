@@ -2,7 +2,7 @@
 title: "High Content Phenotypic Screening Identifies Serotonin Receptor Modulators with Selective Activity upon Breast Cancer Cell Cycle and Cytokine Signaling Pathways"
 collection: publications
 permalink: /publication/2019-11-09
-excerpt: ''
+excerpt: 'A high-content screen revealed a number of compounds acting on the serotonin system which had distinct responses across a panel of breast cancer cell-lines.'
 date: 2019-11-09
 venue: 'Bioorganic & Medicinal Chemistry'
 paperurl: 'https://www.sciencedirect.com/science/article/pii/S0968089619310521'
