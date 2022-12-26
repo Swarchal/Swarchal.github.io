@@ -9,31 +9,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/nim.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        },
+      };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" aync src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
   </head>
   <body>
     <div class="article">
       <p><a href="index.html">Back to posts</a></p>
       <hr>
       <h1>YASSS - Yet Another Static Site Server</h1>
-<p>Having just made a static site generator the first post on it might be as
-well about how I made it, or perhaps I made one without any plans about what
-I'm actually going to write about.</p>
+<p>Having just made a <a href="https://github.com/swarchal/yasss">static site generator</a>
+the first post on it might as well be about how I made it since I don't have
+any plans for what I'm going to write about.</p>
 <p>A static site generator simply creates the necessary HTML to show some web pages,
 there's no database or REST API, just HTML (maybe some simple javascript). The
 world <strong>does not</strong> need another static site generator, there are probably thousands
-and I would guess the majority of them are better than this. But I'm stuck at
-my parents house over Christmas and writing one in nim sounded like a quick,
-easy project to amuse myself with.</p>
-<p>I used <a href="https://jekyllrb.com">jekyll</a> a few years ago which is my only experience
-with these sort of things, so this copies the basics from what I remember:
+and I would guess nearly all of them are better than this. But I'm stuck at
+my parents house over Christmas and writing one in <a href="https://nim-lang,org">nim</a>
+sounded like a quick, easy project to amuse myself with.</p>
+<p>I have used <a href="https://jekyllrb.com">jekyll</a> in the past which is my only experience
+with these sort of things, so YASSS copies the basics from what I remember:
 write some blog-style posts in markdown with a yaml header, run a command and
 out pops your html files which can be rendered with something like github pages.
 So for this I'm using soasme's
-<a href="https://www.github.com/soasme/nim-markdown">nim-markdown</a> library to convert
-.md to .html, which is a single <code>markdown(md_text)</code> command, and then sticking
-this directly in a html template using
-<a href="https://www.github.com/soasme/nim-mustache">nim-mustache</a> (again from soasme).
-I then populate some <code>&lt;li&gt;</code> in an <code>index.html</code> to link to the individual posts.</p>
+<a href="https://www.github.com/soasme/nim-markdown">nim-markdown</a> library which
+converts markdown to html and then sticking this directly in the body of a html
+template using <a href="https://www.github.com/soasme/nim-mustache">nim-mustache</a>
+(again from soasme). I then link to these posts from a main <code>index.html</code>
+template.</p>
 <h2>Fetching posts</h2>
 <p>First we need to find all the markdown files in a given directory, in this case <code>./posts/</code>.
 This should be fairly easy in most languages, in nim it's a case of:</p>
@@ -42,7 +51,7 @@ This should be fairly easy in most languages, in nim it's a case of:</p>
 proc getAllPosts(fpath: string = &quot;./posts&quot;): seq[string] =
   return walkFiles(fmt&quot;{fpath}/*.md&quot;).toSeq().map(readFile)
 </code></pre>
-<p>This relies on <code>walkFiles()</code> with a wildcard to get only the markdown (.md) filenames
+<p>This uses nim's <code>walkFiles()</code> with a wildcard to get only the markdown (.md) filenames
 and then uses <code>readFile</code> to read the file into memory, returning a sequence where each
 element is a post as a raw string.</p>
 <h2>Parsing the frontmatter</h2>
@@ -59,6 +68,11 @@ they use a yaml header at the top of the markdown post between <code>---</code> 
  ## subheading
  Content goes here.
 </code></pre>
+<p>In jekyll there's a whole load customisations you can put in the frontmatter,
+but for this I'll stick with the title (as appears in the index), the date
+which is used to sort the posts in the index, and public as a boolean flag
+whether the posts should be made public or not. I've also added a description
+value which is parsed, but this isn't used anywhere yet.</p>
 <p>Now we could just fetch those lines between the <code>---</code> lines and parse them with
 a yaml parser (or probably any other key-value parser), but I think there's already
 enough dependencies in this project so I wrote my own bug-ridden key-value parser.</p>
@@ -129,8 +143,9 @@ return FrontMatter(
 to find the value, and I can already see how it would break if someone has a <code>:</code>
 character in their title. So maybe it will get tidied up at some point.</p>
 <h2>Parsing the markdown body</h2>
-<p>Parsing the markdown body is even easier, just remove any frontmatter and
-then lean on the <code>nim-markdown</code> library to convert the markdown contents to html.</p>
+<p>Parsing the markdown body is even easier, just loop through lines in the files
+which aren't in the frontmatter, join them together into a single string and
+use <code>nim-markdown</code> to convert the markdown contents to html.</p>
 <pre><code class="language-nim">import markdown
 
 proc parseBody(text: string): string =
@@ -148,7 +163,7 @@ proc parseBody(text: string): string =
 </code></pre>
 <h2>Creating the post html from a template</h2>
 <p>The aim now is to stick the html (converted from markdown) into the body
-of a simple html template. For this I'm using <code>nim-mustache</code> implements
+of a simple html template. For this I'm using <code>nim-mustache</code> which implements
 <a href="https://en.wikipedia.org/wiki/Mustache_(template_system)">mustache</a>
 as a templating language.</p>
 <pre><code class="language-html">&lt;html lang=&quot;en&quot;&gt;
@@ -168,7 +183,7 @@ as a templating language.</p>
 The body is within three curlies as we want to insert the raw html, otherwise
 mustache escapes it for us which we don't want.</p>
 <p>I've removed it from the above example, but there's also some highlight.js scripts
-I'm pulling from a CDN so I can have syntax highlighting.</p>
+I'm pulling from a CDN so I can have syntax highlighting and mathjax to render $\LaTeX$.</p>
 <h2>Creating the index page</h2>
 <p>The index page is just a list which links to each post in date order, so we're
 just looping through the posts in a template.</p>
