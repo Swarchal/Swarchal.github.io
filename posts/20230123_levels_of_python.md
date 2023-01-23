@@ -188,8 +188,8 @@ classes (`SampleSaveError`) to catch and handle in specific ways and so on.
 
 ## conclusion
 
-Personally I think around level 4 (namedtuples/dataclasses) is a sweet spot for
-the type of work I do, which is making small tools for scientific computing.
-I think there's more to explore here as "enterprise" code is generally associated
-with OOP. I'm not entirely sure why, but it would be interesting to see what
-would be considered "enterprisey" code written in a functional style.
+Personally I think around level 4 (namedtuples/dataclasses passed to functions)
+is a sweet spot for the type of work I do, which is making small tools for scientific
+computing. I think there's more to explore here as "enterprise" code is generally
+associated with OOP. I'm not entirely sure why, but it would be interesting to see
+what would be considered "enterprisey" code written in a functional style.
