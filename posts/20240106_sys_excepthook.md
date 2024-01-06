@@ -62,7 +62,7 @@ This can then be imported and initialised at the top of an application:
 from exception_handling import set_exception_endpoint
 
 
-set_exception_endpoint("my_crashing_app", "http:localhost:5000")
+set_exception_endpoint("my_crashing_app", "http://localhost:5000")
 
 
 def main():
