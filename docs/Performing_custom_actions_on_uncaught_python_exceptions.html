@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Performing custom actions on uncaught python exceptions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/nim.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        },
+      };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" aync src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  </head>
+  <body>
+    <div class="article">
+      <p><a href="index.html">Back to posts</a></p>
+      <hr>
+      <h1>Performing custom actions on uncaught python exceptions</h1>
+<p>I wanted to make something that sent a request to a webserver whenenever my
+python application crashed, which would be logged in a database. It's possible
+to just wrap the <code>main()</code> function in a <code>try: except:</code> block, but that's ugly
+and after some quick googling I realised there's a nicer way to do this.</p>
+<p>Python's <code>sys.excepthook</code> runs whenever there's an uncaught exception, and you
+can just write your own function to override this.</p>
+<p>Here's an example sending the traceback to a server with a http post request,
+before raising the usual exception.</p>
+<pre><code class="language-python"># exception_handling.py
+
+import sys
+import traceback
+from types import TracebackType
+from typing import Type
+
+import requests
+
+
+def set_exception_endpoint(app_name: str, url: str) -&gt; None:
+
+    def handle_exception(
+        exc_type: Type[BaseException],
+        exc_value: BaseException,
+        exc_traceback: Optional[TracebackType],
+    ) -&gt; None:
+        &quot;&quot;&quot;over-ride sys.excepthook with a requests.post&quot;&quot;&quot;
+        if issubclass(exc_type, KeyboardInterrupt):
+            # probably don't want to be recording an KeyboardInterrupts
+            sys.__excepthook__(exc_type, exc_value, exc_traceback)
+            return
+        traceback_str = &quot;&quot;.join(
+            traceback.format_exception(exc_type, exc_value, exc_traceback)
+        )
+        data = {
+            &quot;app&quot;: app,
+            &quot;traceback&quot;: traceback_str,
+        }
+        resp = requests.post(url, json=data, timeout=0.5)
+        sys.__excepthook__(exc_type, exc_value, exc_traceback)
+
+    sys.excepthook = handle_exception
+</code></pre>
+<p>This can then be imported and initialised at the top of an application:</p>
+<pre><code class="language-python">from exception_handling import set_exception_endpoint
+
+
+set_exception_endpoint(&quot;my_crashing_app&quot;, &quot;http:localhost:5000&quot;)
+
+
+def main():
+    # stuff goes here
+    pass
+
+
+if __name__ == &quot;__main__&quot;:
+    main():
+</code></pre>
+<p>I'm trying this at work where many of my applications run in docker containers
+on VMs or k8 pods where I don't have much visibility to logs or any crash reports.</p>
+
+    </div>
+  </body>
+</html>
