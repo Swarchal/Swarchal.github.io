@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Performing custom actions on uncaught python exceptions</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/dark.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/nim.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/nim.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-      MathJax = {
-        tex: {
-          inlineMath: [["$", "$"], ["\\(", "\\)"]],
-        },
-      };
+        MathJax = {
+            tex: {
+                inlineMath: [["$", "$"], ["\\(", "\\)"]],
+            },
+        };
     </script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script type="text/javascript" id="MathJax-script" aync src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-  </head>
-  <body>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+
+<body>
     <div class="article">
-      <p><a href="index.html">Back to posts</a></p>
-      <hr>
-      <h1>Performing custom actions on uncaught python exceptions</h1>
+        <p><a href="index.html">Back to posts</a></p>
+        <hr>
+        <h1>Performing custom actions on uncaught python exceptions</h1>
 <p>I wanted to make something that sent a request to a webserver whenenever my
 python application crashed, which would be logged in a database. It's possible
 to just wrap the <code>main()</code> function in a <code>try: except:</code> block, but that's ugly
@@ -85,5 +88,6 @@ if __name__ == &quot;__main__&quot;:
 on VMs or k8 pods where I don't have much visibility to logs or any crash reports.</p>
 
     </div>
-  </body>
+</body>
+
 </html>
